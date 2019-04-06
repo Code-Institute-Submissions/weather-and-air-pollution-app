@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 10px;
+}
+
+.search {
+  /* background: blue; */
+  border: 1px solid #aaa;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.search input {
+  border: 0;
+  padding: 5px;
+  width: 80%;
+}
+
+.search a {
+  padding: 5px 10px;
+}
