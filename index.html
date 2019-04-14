@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <link rel="stylesheet" href="style/style.css">
   <title>API</title>
@@ -11,12 +15,22 @@
 <body>
   <div class="container">
     <header class="search">
-      <input type="text" placeholder="Enter city name">
-      <a href="#"><i class="fas fa-search-location"></i></a>
+      <input id="search-txt" type="text" placeholder="Enter city name" default="Sierpc">
+      <a href="#" ><i class="fas fa-search-location"></i></a>
     </header>
     <div class="data-container">
-      <div class="weather"></div>
-      <div class="air-pollution"></div>
+      <div class="weather">
+        <h1 id="city"></h1>
+        <p id="temp">23&#xb0;</p>
+        <p id="weather-cond">Sunny</p>
+        <p id="wind">Wind: 5 m/s</p>
+        <p id="pressure">1010 mb</p>
+      </div>
+      <div class="air-pollution">
+        <h2>Air Quality</h2>
+        <p>PM10: 27%   18mg/m3</p>
+        <p>PM2.5: 52%   13mg/m3</p>
+      </div>
     </div>
     <footer>API by Andrzej Rakowski</footer>
   </div>
