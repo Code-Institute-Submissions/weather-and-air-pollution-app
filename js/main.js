@@ -1,12 +1,18 @@
-
-
 const handleSearch = e => {
   const enterPressed = e.type === 'keypress' && e.which === 13;
   const clicked = e.type === 'click';
   const param = $('#search-txt').val();
   if (enterPressed || clicked) {
 
-    getGeo(param, getWeather)
+    getGeo(param, (lat, lng) => {
+      getWeather(lat, lng, (x) => {
+        updateWeather(x)
+      });
+      getAir(lat, lng, (y) => {
+        updateAirQuality(y)
+      })
+    })
+
   };
 }
 
@@ -30,15 +36,28 @@ const getGeo = (city, cb) => {
   });
 }
 
-const getWeather = (latitude, longitude) => {
+const getWeather = (latitude, longitude, cb) => {
   const proxy = 'http://cors-anywhere.herokuapp.com/'
   const url = `https://api.darksky.net/forecast/2939016fca374b82104bc62dd6797cba/${latitude}, ${longitude}`;
   $.getJSON(proxy + url, response => {
     console.log(response);
-    $('#temp').html(response.currently.apparentTemperature)
+    cb(response);
   })
 }
 
-const getAir = () => {
+const getAir = (latitude, longitude, cb) => {
+  console.log('getAir');
+  const url = `http://api.airvisual.com/v2/nearest_city?lat=${latitude}&lon=${longitude}&key=fjzgeB3ZH3puCAicB`;
+  $.getJSON(url, response => {
+    console.log(response);
+    cb(response)
+  })
+}
 
+const updateWeather = (weatherData) => {
+    $('#temp').html(weatherData.currently.apparentTemperature)
+}
+
+const updateAirQuality = (airQualityData) => {
+    $('#pm10').html(airQualityData.data.current.pollution.aqius)
 }
