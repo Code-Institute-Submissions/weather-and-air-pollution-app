@@ -38,7 +38,7 @@ const getGeo = (city, cb) => {
 
 const getWeather = (latitude, longitude, cb) => {
   const proxy = 'http://cors-anywhere.herokuapp.com/'
-  const url = `https://api.darksky.net/forecast/2939016fca374b82104bc62dd6797cba/${latitude}, ${longitude}`;
+  const url = `https://api.darksky.net/forecast/2939016fca374b82104bc62dd6797cba/${latitude}, ${longitude}?units=si`;
   $.getJSON(proxy + url, response => {
     console.log(response);
     cb(response);
@@ -54,8 +54,14 @@ const getAir = (latitude, longitude, cb) => {
   })
 }
 
-const updateWeather = (weatherData) => {
-    $('#temp').html(weatherData.currently.apparentTemperature)
+const updateWeather = (weatherData, getAir) => {
+    $('#timezone').html(weatherData.timezone);
+    $('#temp').html(weatherData.currently.temperature + "&#xb0; C");
+    $('#humidity').html(weatherData.currently.humidity*100 + "%");
+    $('#summary').html(weatherData.daily.summary);
+    $('#weather-cond').html(weatherData.daily.data[0].icon);
+    $('#wind-speed').html(weatherData.currently.windSpeed + "m/s");
+    $('#pressure').html(weatherData.currently.pressure);
 }
 
 const updateAirQuality = (airQualityData) => {
