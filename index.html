@@ -13,17 +13,18 @@
   <title>API</title>
 </head>
 <body>
-  <div class="container">
+  <div class="wrap">
+    <div class="container">
     <header class="search">
       <input id="search-txt" type="text" placeholder="Enter city name" default="Sierpc">
       <i id="search-btn" class="fas fa-search-location"></i>
     </header>
     <div class="data-container">
       <div class="weather">
-        <h1 id="city"></h1>
+        <h2>Weather</h2>
         <p id="timezone">timezone</p>
+        <p id="humidity">Humidity: 000</p>
         <p id="temp">23&#xb0;</p>
-        <p id="humidity">000</p>
         <p id="summary">cccc</p>
         <p value="current temperature" id="weather-cond">AAAAAAAAAAA</p>
         <p id="wind-speed">bbbbbbbb</p>
@@ -31,12 +32,18 @@
       </div>
       <div class="air-pollution">
         <h2>Air Quality</h2>
-        <p id="pm10">PM10: 27%   18mg/m3</p>
-        <p>PM2.5: 52%   13mg/m3</p>
+        <h3 id="pm10">PM10: 27%   18mg/m3</h3>
+        <p>0-50: Good</p>
+        <p>51-100: Moderate</p>
+        <p>101-150: Unhealthy for Sensitive Groups</p>
+        <p>151-200: Very Unhealthy</p>
+        <p>301-500+: Hazardous</p>
       </div>
     </div>
-    <footer>API by Andrzej Rakowski</footer>
   </div>
+</div>
+    <footer>API by Andrzej Rakowski</footer>
+  
 </body>
 <script type="text/javascript" src="js/main.js">
 

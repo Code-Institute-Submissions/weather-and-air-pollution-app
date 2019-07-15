@@ -46,7 +46,6 @@ const getWeather = (latitude, longitude, cb) => {
 }
 
 const getAir = (latitude, longitude, cb) => {
-  console.log('getAir');
   const url = `http://api.airvisual.com/v2/nearest_city?lat=${latitude}&lon=${longitude}&key=fjzgeB3ZH3puCAicB`;
   $.getJSON(url, response => {
     console.log(response);
@@ -54,14 +53,14 @@ const getAir = (latitude, longitude, cb) => {
   })
 }
 
-const updateWeather = (weatherData, getAir) => {
-    $('#timezone').html(weatherData.timezone);
-    $('#temp').html(weatherData.currently.temperature + "&#xb0; C");
-    $('#humidity').html(weatherData.currently.humidity*100 + "%");
-    $('#summary').html(weatherData.daily.summary);
-    $('#weather-cond').html(weatherData.daily.data[0].icon);
-    $('#wind-speed').html(weatherData.currently.windSpeed + "m/s");
-    $('#pressure').html(weatherData.currently.pressure);
+const updateWeather = (weatherData) => {
+    $('#timezone').html("Timezone: " + weatherData.timezone);
+    $('#temp').html("Temperature: " + weatherData.currently.temperature + " &#xb0;C");
+    $('#humidity').html("Humidity: " + Math.floor(weatherData.currently.humidity*100) + "%");
+    $('#summary').html(weatherData.hourly.summary);
+    $('#weather-cond').html(weatherData.currently.summary);
+    $('#wind-speed').html("Wind speed: " + Math.floor(weatherData.currently.windSpeed*3.6) + " km/h");
+    $('#pressure').html("Pressure: " + weatherData.currently.pressure + " hPa");
 }
 
 const updateAirQuality = (airQualityData) => {
