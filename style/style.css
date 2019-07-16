@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Roboto Condensed', 'sans-serif';
+}
+
 .good {
   color: #54771D;
 }
@@ -40,7 +44,7 @@
 .container {
   width: 60%;
   max-height: 50%;
-  border: 1px solid red;
+  border: 3px solid #0aa5d8;
   padding: 20px;
   background: #ffffff;
   border-radius: 30px;
@@ -65,7 +69,7 @@
 .air-pollution {
   width: 50%;
   padding: 20px;
-  border: 1px solid hotpink;
+  border: 2px solid #00bfff;
   border-radius: 20px;
 }
 
@@ -102,4 +106,11 @@
 .search input:focus,
 .search a:focus {
   outline: none;
+}
+
+.footer {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

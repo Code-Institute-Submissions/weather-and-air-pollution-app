@@ -8,6 +8,7 @@
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap&subset=latin-ext" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <link rel="stylesheet" href="style/style.css">
   <title>API</title>
@@ -22,27 +23,31 @@
     <div class="data-container">
       <div class="weather">
         <h2>Weather</h2>
-        <p id="timezone">timezone</p>
-        <p id="humidity">Humidity: 000</p>
-        <p id="temp">23&#xb0;</p>
-        <p id="summary">cccc</p>
-        <p value="current temperature" id="weather-cond">AAAAAAAAAAA</p>
-        <p id="wind-speed">bbbbbbbb</p>
-        <p id="pressure">1111111</p>
+        <p id="timezone">Timezone: -</p>
+        <p id="temp">Temperature: - &#xb0;C</p>
+        <p id="humidity">Humidity: -</p>
+        <p id="wind-speed">Wind speed: -</p>
+        <p id="pressure">Pressure: -</p>
+        <p id="weather-cond">daily forecast</p>
+        <p id="summary">7 days forecast</p>
+        
+        
       </div>
       <div class="air-pollution">
         <h2>Air Quality</h2>
-        <h3 id="pm10">PM10: 27%   18mg/m3</h3>
-        <p>0-50: Good</p>
-        <p>51-100: Moderate</p>
-        <p>101-150: Unhealthy for Sensitive Groups</p>
-        <p>151-200: Very Unhealthy</p>
-        <p>301-500+: Hazardous</p>
+        <h3 id="pm10">-</h3>
+        <p>0-50: <span class="good">Good</span></p>
+        <p>51-100: <span class="moderate">Moderate</span></p>
+        <p>101-150: <span class="unhealthy-for-sensitive-groups">Unhealthy for Sensitive Groups</span></p>
+        <p>151-200: <span class="very-unhealthy">Very Unhealthy</span></p>
+        <p>301-500+: <span class="hazardous">Hazardous</span></p>
       </div>
     </div>
   </div>
 </div>
-    <footer>API by Andrzej Rakowski</footer>
+    <footer class="footer">
+      <p>Application created by Andrzej Rakowski using <a href="https://darksky.net/"> darksky</a> and <a href="https://www.airvisual.com/air-pollution-data-api"> airvisual</a> APIs.</p>
+    </footer>
   
 </body>
 <script type="text/javascript" src="js/main.js">

@@ -11,6 +11,10 @@ The application is divided in two sections:
 - [ ] - adding weather icons (they are not part of darksky.net API)
 ##Testing
 ##Technologies used
+Application was built using following technologies:
+* HTML,
+* CSS,
+* JavaScript
 ##Deployment
 ##Credits
 ###Media

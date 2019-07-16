@@ -55,10 +55,10 @@ const getAir = (latitude, longitude, cb) => {
 
 const updateWeather = (weatherData) => {
     $('#timezone').html("Timezone: " + weatherData.timezone);
-    $('#temp').html("Temperature: " + weatherData.currently.temperature + " &#xb0;C");
+    $('#temp').html("Temperature: " + (weatherData.currently.temperature).toFixed(1) + " &#xb0;C");
     $('#humidity').html("Humidity: " + Math.floor(weatherData.currently.humidity*100) + "%");
     $('#summary').html(weatherData.hourly.summary);
-    $('#weather-cond').html(weatherData.currently.summary);
+    $('#weather-cond').html(weatherData.daily.summary);
     $('#wind-speed').html("Wind speed: " + Math.floor(weatherData.currently.windSpeed*3.6) + " km/h");
     $('#pressure').html("Pressure: " + weatherData.currently.pressure + " hPa");
 }
