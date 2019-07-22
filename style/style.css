@@ -122,3 +122,35 @@ body {
     width: 80%;
   }
 }
+
+/* mobile view */
+
+@media (max-width: 590px) {
+
+  .wrap {
+    padding: 16px;
+  }
+
+  .container {
+    max-height: 90%;
+    width: 100%;
+  }
+
+  .data-container {
+    flex-direction: column;
+  }
+
+  .weather {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  .air-pollution {
+    width: 100%;
+    margin: 0;
+  }
+
+  .footer p {
+    text-align: center;
+  }
+}
