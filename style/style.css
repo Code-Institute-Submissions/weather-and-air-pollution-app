@@ -114,3 +114,11 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+/* tablet view */
+
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+}

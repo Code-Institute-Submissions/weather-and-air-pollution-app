@@ -60,7 +60,7 @@ const updateWeather = (weatherData) => {
     $('#summary').html(weatherData.hourly.summary);
     $('#weather-cond').html(weatherData.daily.summary);
     $('#wind-speed').html("Wind speed: " + Math.floor(weatherData.currently.windSpeed*3.6) + " km/h");
-    $('#pressure').html("Pressure: " + weatherData.currently.pressure + " hPa");
+    $('#pressure').html("Pressure: " + Math.floor(weatherData.currently.pressure) + " hPa");
 }
 
 const updateAirQuality = (airQualityData) => {
