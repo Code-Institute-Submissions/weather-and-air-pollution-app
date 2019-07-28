@@ -21,7 +21,7 @@ $('#search-btn').on('click', handleSearch);
 
 
 const getGeo = (city, cb) => {
-  const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=AIzaSyA9SZckhP0OZcTgK_8d-bEXjugGkACUBkw`;
+  const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=AIzaSyB_NuitwhpKPA8rVhGHmeCLvpKI5RkclGg`;
   $.getJSON(url, data => {
     const res = data.results
     if (res.length === 0) {
@@ -64,5 +64,5 @@ const updateWeather = (weatherData) => {
 }
 
 const updateAirQuality = (airQualityData) => {
-    $('#pm10').html(airQualityData.data.current.pollution.aqius)
+    $('#airquality').html(airQualityData.data.current.pollution.aqius)
 }
