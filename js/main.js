@@ -46,7 +46,7 @@ const getWeather = (latitude, longitude, cb) => {
 }
 
 const getAir = (latitude, longitude, cb) => {
-  const url = `http://api.airvisual.com/v2/nearest_city?lat=${latitude}&lon=${longitude}&key=fjzgeB3ZH3puCAicB`;
+  const url = `https://api.airvisual.com/v2/nearest_city?lat=${latitude}&lon=${longitude}&key=fjzgeB3ZH3puCAicB`;
   $.getJSON(url, response => {
     console.log(response);
     cb(response)

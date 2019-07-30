@@ -21,8 +21,8 @@ After typing in a city name, a request is being sent to Google Geocoding API, wh
 Application was built using following technologies:
 * HTML - used for the structural elements of the site,
 * CSS - used to style the HTML elements,
-* JavaScript - used to send requests to APIs,
-* Geocoding API from Google - used to retrieve coordinates of a location
+* JavaScript - used to send requests to APIs and ,
+* [Geocoding API from Google](https://developers.google.com/maps/documentation/geocoding/start) - used to retrieve coordinates of a location
 * [darksky API](https://darksky.net) - used to retrieve weather details of a location
 * [airvisual API](https://www.airvisual.com/air-pollution-data-api) - used to retrieve an information regarding air quality of a location.
 ## Deployment
