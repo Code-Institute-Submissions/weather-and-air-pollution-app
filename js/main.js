@@ -37,8 +37,8 @@ const getGeo = (city, cb) => {
 }
 
 const getWeather = (latitude, longitude, cb) => {
-  const proxy = 'https://cors-anywhere.herokuapp.com/'
-  const url = `https://api.darksky.net/forecast/2939016fca374b82104bc62dd6797cba/${latitude}, ${longitude}?units=si`;
+  const proxy = 'http://cors-anywhere.herokuapp.com/'
+  const url = `http://api.darksky.net/forecast/2939016fca374b82104bc62dd6797cba/${latitude}, ${longitude}?units=si`;
   $.getJSON(proxy + url, response => {
     console.log(response);
     cb(response);
