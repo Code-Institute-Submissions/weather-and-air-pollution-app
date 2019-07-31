@@ -12,6 +12,7 @@ The application is divided into three sections:
 * Search field
 * Weather data information section, which provides information on the weather conditions,
 * Air quality information section, which provides information regarding air quality,
+The wireframes have been created using Balsamiq, to give an idea of how the application would look like on a different devices.
 ### Existing features
 After typing in a city name, a request is being sent to Google Geocoding API, which returns latitude and longitude information, which are then passed to **darksky** and **airvisual** APIs. The data that application receives from APIs is split in two panels. The left panel (top one for mobile devices) provides user with information regarding weather, such as: current temperature, humidity, wind speed, pressure, brief description of a daily weather and seven days prediction, as well as timezone of a location. The right panel (bottom one for mobile devices) provides the air pollution index with legend.
 ### Features left to implement
@@ -21,7 +22,7 @@ After typing in a city name, a request is being sent to Google Geocoding API, wh
 Application was built using following technologies:
 * HTML - used for the structural elements of the site,
 * CSS - used to style the HTML elements,
-* JavaScript - used to send requests to APIs and ,
+* JavaScript - used to send requests to APIs and injecting received information into HTML,
 * [Geocoding API from Google](https://developers.google.com/maps/documentation/geocoding/start) - used to retrieve coordinates of a location
 * [darksky API](https://darksky.net) - used to retrieve weather details of a location
 * [airvisual API](https://www.airvisual.com/air-pollution-data-api) - used to retrieve an information regarding air quality of a location.
