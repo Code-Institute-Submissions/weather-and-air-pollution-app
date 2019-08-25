@@ -1,3 +1,4 @@
+// location search input and update information function with data obtained from APIs
 const handleSearch = e => {
   const enterPressed = e.type === 'keypress' && e.which === 13;
   const clicked = e.type === 'click';
@@ -16,10 +17,11 @@ const handleSearch = e => {
   };
 }
 
+// search running on key press or mouse click
 $(document).on('keypress', handleSearch);
 $('#search-btn').on('click', handleSearch);
 
-
+// Geocoding API request
 const getGeo = (city, cb) => {
   const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=AIzaSyB_NuitwhpKPA8rVhGHmeCLvpKI5RkclGg`;
   $.getJSON(url, data => {
@@ -36,6 +38,7 @@ const getGeo = (city, cb) => {
   });
 }
 
+// darksky API request
 const getWeather = (latitude, longitude, cb) => {
   const proxy = 'https://cors-anywhere.herokuapp.com/'
   const url = `https://api.darksky.net/forecast/2939016fca374b82104bc62dd6797cba/${latitude}, ${longitude}?units=si`;
@@ -45,6 +48,7 @@ const getWeather = (latitude, longitude, cb) => {
   })
 }
 
+// Airvisual API request
 const getAir = (latitude, longitude, cb) => {
   const url = `https://api.airvisual.com/v2/nearest_city?lat=${latitude}&lon=${longitude}&key=fjzgeB3ZH3puCAicB`;
   $.getJSON(url, response => {
@@ -53,6 +57,7 @@ const getAir = (latitude, longitude, cb) => {
   })
 }
 
+// function injecting data to the weather section
 const updateWeather = (weatherData) => {
     $('#timezone').html("Timezone: " + weatherData.timezone);
     $('#temp').html("Temperature: " + (weatherData.currently.temperature).toFixed(1) + " &#xb0;C");
@@ -63,6 +68,7 @@ const updateWeather = (weatherData) => {
     $('#pressure').html("Pressure: " + Math.floor(weatherData.currently.pressure) + " hPa");
 }
 
+// function injecting data to the air quality section
 const updateAirQuality = (airQualityData) => {
     $('#airquality').html(airQualityData.data.current.pollution.aqius)
 }

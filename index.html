@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap&subset=latin-ext"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <link rel="stylesheet" href="style/style.css">
-  <title>API</title>
+  <title>Weather &amp; Air Pollution Application</title>
 </head>
+
 <body>
   <div class="wrap">
     <div class="container">
-    <header class="search">
-      <input id="search-txt" type="text" placeholder="Enter city name" default="Sierpc">
-      <i id="search-btn" class="fas fa-search-location"></i>
-    </header>
-    <div class="data-container">
-      <div class="weather">
-        <h2>Weather</h2>
-        <p id="timezone">Timezone: -</p>
-        <p id="temp">Temperature: - &#xb0;C</p>
-        <p id="humidity">Humidity: -</p>
-        <p id="wind-speed">Wind speed: -</p>
-        <p id="pressure">Pressure: -</p>
-        <p id="summary">Daily forecast</p>
-        <p id="weather-cond">7 Days forecast</p>
-      </div>
-      <div class="air-pollution">
-        <h2>Air Quality</h2>
-        <h3 id="airquality">-</h3>
-        <p>0-50: <span class="good">Good</span></p>
-        <p>51-100: <span class="moderate">Moderate</span></p>
-        <p>101-150: <span class="unhealthy-for-sensitive-groups">Unhealthy for Sensitive Groups</span></p>
-        <p>151-200: <span class="very-unhealthy">Very Unhealthy</span></p>
-        <p>301-500+: <span class="hazardous">Hazardous</span></p>
+      <header class="search">
+        <input id="search-txt" type="text" placeholder="Enter city name" default="Sierpc">
+        <i id="search-btn" class="fas fa-search-location"></i>
+      </header>
+      <div class="data-container">
+        <div class="weather">
+          <h2>Weather</h2>
+          <p id="timezone">Timezone: -</p>
+          <p id="temp">Temperature: - &#xb0;C</p>
+          <p id="humidity">Humidity: -</p>
+          <p id="wind-speed">Wind speed: -</p>
+          <p id="pressure">Pressure: -</p>
+          <p id="summary">Daily forecast</p>
+          <p id="weather-cond">7 Days forecast</p>
+        </div>
+        <div class="air-pollution">
+          <h2>Air Quality</h2>
+          <h3 id="airquality">-</h3>
+          <p>0-50: <span class="good">Good</span></p>
+          <p>51-100: <span class="moderate">Moderate</span></p>
+          <p>101-150: <span class="unhealthy-for-sensitive-groups">Unhealthy for Sensitive Groups</span></p>
+          <p>151-200: <span class="very-unhealthy">Very Unhealthy</span></p>
+          <p>301-500+: <span class="hazardous">Hazardous</span></p>
+        </div>
       </div>
     </div>
   </div>
-</div>
-    <footer class="footer">
-      <p>Application created by Andrzej Rakowski using <a href="https://darksky.net/"> darksky</a> and <a href="https://www.airvisual.com/air-pollution-data-api"> airvisual</a> APIs.</p>
-    </footer>
-  
+  <footer class="footer">
+    <p>Application created by Andrzej Rakowski using <a href="https://darksky.net/"> darksky</a> and <a
+        href="https://www.airvisual.com/air-pollution-data-api"> airvisual</a> APIs.</p>
+  </footer>
+
 </body>
 <script type="text/javascript" src="js/main.js">
-
 </script>
 </html>
