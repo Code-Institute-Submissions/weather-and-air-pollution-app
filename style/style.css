@@ -34,6 +34,8 @@ body {
   color: #5A0F00;
 }
 
+/* website styling */
+
 .wrap {
   width: 100%;
   height: 90vh;
@@ -116,6 +118,8 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+/* media queries */
 
 /* tablet view */
 

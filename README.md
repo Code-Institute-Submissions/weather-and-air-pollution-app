@@ -5,14 +5,14 @@ This is my single page application using APIs, built as my second milestone proj
 My first goal in the design of the application was to provide users with detailed information served in a nice and clean way. As the information itself is not very extensive, I wanted to present it in a form similar to desktop weather stations, that remind tablets.
 User stories:
 * As a user I want to get the information on weather in a specified city
-* As a user I want to obtain the information regarding air quality in a specified city
+* As a user I want to obtain the information regarding air quality in a specified city<br>
+The wireframes have been created using Balsamiq, to give an idea of how the application would look like on a different devices. They are saved in the [Wireframes](https://github.com/r-andy79/weather-and-air-pollution-app/tree/master/Wireframes) folder.
 ## Features
 The application is using three APIs. **Geocoding API** from Google, obtains coordinates of a city that was input in the search field, which are subsequently passed to [darksky API](https://darksky.net), which provides information about weather conditions and [airvisual API](https://www.airvisual.com/air-pollution-data-api). This API provides information on air quality.
 The application is divided into three sections:
 * Search field
 * Weather data information section, which provides information on the weather conditions,
-* Air quality information section, which provides information regarding air quality,
-The wireframes have been created using Balsamiq, to give an idea of how the application would look like on a different devices.
+* Air quality information section, which provides information regarding air quality,<br>
 ### Existing features
 After typing in a city name and pressing 'Enter' or clicking the lens icon in the input field, a request is being sent to Google Geocoding API, which returns latitude and longitude information, which are then passed to **darksky** and **airvisual** APIs. The data that application receives from APIs is injected into two panels. The left panel (top one for mobile devices) provides user with information regarding weather, such as: current temperature, humidity, wind speed, pressure, brief description of a daily weather and seven days forecase, as well as timezone of a location. The right panel (bottom one for mobile devices) provides the air pollution index with legend, describing the level of pollution.
 ### Features left to implement
