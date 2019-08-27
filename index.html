@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
+  
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap&subset=latin-ext"
     rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
@@ -17,11 +16,14 @@
 <body>
   <div class="wrap">
     <div class="container">
+      <!-- header with search field -->
       <header class="search">
         <input id="search-txt" type="text" placeholder="Enter city name" default="Sierpc">
         <i id="search-btn" class="fas fa-search-location"></i>
       </header>
+
       <div class="data-container">
+        <!-- weather data container -->
         <div class="weather">
           <h2>Weather</h2>
           <p id="timezone">Timezone: -</p>
@@ -32,6 +34,7 @@
           <p id="summary">Daily forecast</p>
           <p id="weather-cond">7 Days forecast</p>
         </div>
+        <!-- air quality container -->
         <div class="air-pollution">
           <h2>Air Quality</h2>
           <h3 id="airquality">-</h3>
@@ -50,6 +53,9 @@
   </footer>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/main.js">
 </script>
+
 </html>
